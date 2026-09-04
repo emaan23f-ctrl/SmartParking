@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><title>About - SmartParking</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><i class="fa-solid fa-square-parking"></i> SmartParking</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="choose-parking.html">Choose Parking</a>
+      <a href="booking.html">Booking</a>
+      <a href="parking.html">Parking Owners</a>
+      <a href="contact%20us.html">Contact Us</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="btn-theme"><i class="fa-solid fa-moon"></i></button>
+      <button class="btn-primary" onclick="openMyBookings()"><i class="fa-solid fa-list-check"></i> My Bookings</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>About SmartParking</h2>
+      <p>We connect drivers with available parking slots in real time, saving fuel, time, and stress. Partnered with top security providers to ensure vehicle safety.</p>
+    </section>
+
+    <section class="section highlight-bg">
+      <h2>How It Works</h2>
+      <div class="steps-grid">
+        <div class="step"><h3>1. Search</h3><p>Enter your destination or click near me.</p></div>
+        <div class="step"><h3>2. Choose</h3><p>Select spot with required features (EV, CCTV).</p></div>
+        <div class="step"><h3>3. Book & Park</h3><p>Reserve online and follow navigation.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>User Reviews & Ratings</h2>
+      <div class="reviews-grid">
+        <div class="review-card">⭐ 4.8/5 - "Found parking instantly in downtown during rush hour!" - Ali K.</div>
+        <div class="review-card">⭐ 5.0/5 - "Loved the EV charging filter option." - Sara T.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer><p><center><bold>&copy; 2026 SmartParking. All rights reserved. Designed by Emaan Fatima</bold></center></p></footer>
+
+  <div id="booking-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h3>📱 Booking Details</h3>
+      <div id="modal-details"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

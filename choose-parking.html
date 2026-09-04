@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><title>Choose Parking - SmartParking</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><i class="fa-solid fa-square-parking"></i> SmartParking</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="choose-parking.html" class="active">Choose Parking</a>
+      <a href="booking.html">Booking</a>
+      <a href="parking.html">Parking Owners</a>
+      <a href="contact%20us.html">Contact Us</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="btn-theme"><i class="fa-solid fa-moon"></i></button>
+      <button class="btn-primary" onclick="openMyBookings()"><i class="fa-solid fa-list-check"></i> My Bookings</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>Choose Your Parking</h2>
+      <div class="filters">
+        <select id="filter-vehicle">
+          <option value="all">Vehicle Type (All)</option>
+          <option value="car">Car</option>
+          <option value="bike">Bike</option>
+          <option value="truck">SUV/Truck</option>
+        </select>
+        <label><input type="checkbox" id="filter-ev"> ⚡ EV Charging</label>
+        <label><input type="checkbox" id="filter-disabled"> ♿ Disabled Parking</label>
+        <label><input type="checkbox" id="filter-cctv"> 🛡️ CCTV Security</label>
+      </div>
+
+      <div class="parking-list" id="parking-list"></div>
+    </section>
+  </main>
+
+  <footer><p><center><bold>&copy; 2026 SmartParking. All rights reserved. Designed by Emaan Fatima</bold></center></p></footer>
+
+  <div id="booking-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h3>📱 Booking Details</h3>
+      <div id="modal-details"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

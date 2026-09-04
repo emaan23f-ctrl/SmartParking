@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><title>Booking - SmartParking</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><i class="fa-solid fa-square-parking"></i> SmartParking</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="choose-parking.html">Choose Parking</a>
+      <a href="booking.html" class="active">Booking</a>
+      <a href="parking.html">Parking Owners</a>
+      <a href="contact%20us.html">Contact Us</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="btn-theme"><i class="fa-solid fa-moon"></i></button>
+      <button class="btn-primary" onclick="openMyBookings()"><i class="fa-solid fa-list-check"></i> My Bookings</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section highlight-bg">
+      <h2>Reserve Your Spot</h2>
+      <form id="booking-form" class="form-container">
+        <div class="form-group">
+          <label>Selected Spot</label>
+          <input type="text" id="book-spot-name" readonly placeholder="Select a spot from List" required>
+        </div>
+        <div class="form-group">
+          <label>Date & Time Slot</label>
+          <input type="datetime-local" id="book-time" required>
+        </div>
+        <div class="form-group">
+          <label>Duration Type</label>
+          <select id="book-type">
+            <option value="hourly">Hourly Rate</option>
+            <option value="daily">Daily Pass</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary">Confirm & Pay</button>
+      </form>
+    </section>
+  </main>
+
+  <footer><p><center><bold>&copy; 2026 SmartParking. All rights reserved. Designed by Emaan Fatima</bold></center></p></footer>
+
+  <div id="booking-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h3>📱 Booking Details</h3>
+      <div id="modal-details"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
