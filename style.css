@@ -19,6 +19,7 @@ body { background: var(--bg-color); color: var(--text-color); transition: 0.3s; 
 
 header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 2rem; background: var(--card-bg); border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 10; }
 .logo { font-size: 1.2rem; font-weight: bold; color: var(--primary-color); }
+.menu-toggle { display: none; }
 nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.25rem 0.5rem; }
 nav a { margin: 0; text-decoration: none; color: var(--text-color); font-weight: 500; font-size: 0.9rem; }
 nav a:hover, nav a.active { color: var(--primary-color); }
@@ -66,7 +67,9 @@ footer { text-align: center; padding: 1.5rem; background: var(--card-bg); border
 @media (max-width: 768px) {
   header { position: relative; flex-direction: column; align-items: stretch; padding: 0.9rem 1rem; }
   .logo { text-align: center; }
-  nav { line-height: 1.5; }
+  .menu-toggle { display: block; position: absolute; top: 0.7rem; right: 1rem; padding: 0.55rem 0.7rem; background: transparent; color: var(--text-color); font-size: 1.25rem; }
+  nav { display: none; flex-direction: column; align-items: center; line-height: 1.5; padding: 0.75rem 0 0.25rem; }
+  nav.open { display: flex; }
   nav a { padding: 0.25rem 0.35rem; }
   .nav-actions { justify-content: center; flex-wrap: wrap; }
 

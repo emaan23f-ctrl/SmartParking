@@ -10,6 +10,7 @@ let bookings = JSON.parse(localStorage.getItem('myBookings')) || [];
 
 document.addEventListener('DOMContentLoaded', () => {
   setupTheme();
+  setupMobileMenu();
   
   if (document.getElementById('parking-grid')) renderMap();
   if (document.getElementById('parking-list')) renderCards(spotsData);
@@ -21,6 +22,28 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('book-spot-name').value = spotParam;
   }
 });
+
+function setupMobileMenu() {
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('header nav');
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.innerHTML = isOpen
+      ? '<i class="fa-solid fa-xmark"></i>'
+      : '<i class="fa-solid fa-bars"></i>';
+  });
+
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    });
+  });
+}
 
 function renderMap() {
   const grid = document.getElementById('parking-grid');
