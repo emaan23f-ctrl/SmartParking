@@ -20,7 +20,7 @@ body { background: var(--bg-color); color: var(--text-color); transition: 0.3s; 
 header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 2rem; background: var(--card-bg); border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 10; }
 .logo { font-size: 1.2rem; font-weight: bold; color: var(--primary-color); }
 .menu-toggle { display: none; }
-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.25rem 0.5rem; }
+nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.25rem 1rem; }
 nav a { margin: 0; text-decoration: none; color: var(--text-color); font-weight: 500; font-size: 0.9rem; }
 nav a:hover, nav a.active { color: var(--primary-color); }
 .nav-actions { display: flex; gap: 10px; }
